@@ -60,7 +60,7 @@ inquirer.prompt([{
 // DNB's Solutions with links to repo and github page
         `# DNB's SOLUTION:\n` +
          `#### UNC Boot Camp Submission: \n` +
-            `🗂️ #####[Github Repository](${response.repository}) | 📄 #####[Github Page](${response.webpage})\n\n`), 
+            `🗂️ [Github Repository](${response.repository}) | 📄 [Github Page](${response.webpage})\n\n`), 
             (err) => err ? console.error(err) : console.log('and appended content was successfully created.'))
         }
     })
