@@ -1,0 +1,23 @@
+{
+  "name": "09--professional_readme_node.js",
+  "version": "1.0.0",
+  "description": "https://dionnenoellabarretto.github.io/09--Professional_ReadME_Node.Js/",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js/issues"
+  },
+  "homepage": "https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
