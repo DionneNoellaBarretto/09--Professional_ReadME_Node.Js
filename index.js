@@ -15,6 +15,16 @@ inquirer.prompt([{
         },
         {
             type: 'input',
+            message: 'User Story',
+            name: 'userStory'
+        },
+        {
+            type: 'input',
+            message: 'Acceptance Criteria',
+            name: 'acceptanceCriteria'
+        },  
+        {
+            type: 'input',
             message: 'Github Repository URL?',
             name: 'repository'
         }, 
@@ -41,11 +51,16 @@ inquirer.prompt([{
             fs.appendFile('README.md', 
 // few sentences about the HW
             (`${response.about}\n\n` +
+// User Story
+`# User Story:\n
+    ${response.userStory}\n\n` +
+// Acceptance Criteria
+`# Acceptance Criteria:\n
+    ${response.acceptanceCriteria}\n\n` +
 // DNB's Solutions with links to repo and github page
-        `# DNB's SOLUTION:\n
-            UNC Boot Camp Submission: \n
-                🗂️[Github Repository](${response.repository}) \n\n 
-                📄[Github Page](${response.webpage})\n\n`), 
+        `# DNB's SOLUTION:\n` +
+         `#### UNC Boot Camp Submission: \n` +
+            `🗂️ #####[Github Repository](${response.repository}) | 📄 #####[Github Page](${response.webpage})\n\n`), 
             (err) => err ? console.error(err) : console.log('and appended content was successfully created.'))
         }
     })

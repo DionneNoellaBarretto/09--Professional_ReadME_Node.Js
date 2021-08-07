@@ -1,0 +1,7 @@
+# The following folders will not be uploaded to github For more informaation refer to https://git-scm.com/docs/gitignore
+## this is all the node js modules
+node_modules 
+
+## this is a mac specific folder 
+###For more information about mac folders check https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder
+**/.DS_Store
