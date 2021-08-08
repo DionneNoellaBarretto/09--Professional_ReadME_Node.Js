@@ -20,17 +20,17 @@
 
  ##### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [dionnenoellabarretto](https://github.com/dionnenoellabarretto) or email me at: 📧denverdionne@gmail.com.
 
-## License Badges:
- This repository is released under the license of: [gpl-3.0](https://opensource.org/licenses/gpl-3.0)
+## License:
+ This repository is released under the license of: [MIT](https://opensource.org/licenses/MIT)
 
 ## Description: 
-A dynamically generated readme based on user input
+In this homework, our task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
 ## Installation Instructions: 
-To generate your own README, first run npm install in order to install the following npm package dependencies as specified in the 
+ To generate your own README, first run 'npm install' or 'npm i' in order to install the npm package dependencies as specified in the package.json. Then run the application using 'node index.js'
 
 ## Contributor(s): 
-none
+Not Applicable for this exercise
 
 ## DNB's SOLUTION:
 #### UNC Boot Camp Submission: 

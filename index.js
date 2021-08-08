@@ -47,12 +47,12 @@ inquirer.prompt([{
        //If User Story and Acceptance Criteria were hardcoded these following 2 could be skipped
         {
             type: 'input',
-            message: 'User Story',
+            message: 'User Story:',
             name: 'userStory'
         },
         {
             type: 'input',
-            message: 'Acceptance Criteria',
+            message: 'Acceptance Criteria:',
             name: 'acceptanceCriteria'
         },  
     ])
