@@ -1,4 +1,5 @@
 // node modules to import  
+// const generatorMarkdown = require("./generateMarkdown")
 const inquirer = require('inquirer'); // this is for the q&a prompts commonly used in cmd interfaces as per https://www.npmjs.com/package/inquirer
 const fs = require('fs'); // this is for access to the filesystem
 
@@ -33,6 +34,11 @@ inquirer.prompt([{
             type: 'input',
             message: 'Github Page URL?',
             name: 'webpage'
+        },
+        {
+            type: 'input',
+            message: 'Your Github username?',
+            name: 'username'
         }, 
     ])
 
@@ -44,22 +50,24 @@ inquirer.prompt([{
 // writes to the README.md file and appends a title to the first line in the file with the cursor moved to the second new line
             fs.writeFile('README.md', (`# ${response.title}\n\n`),
 // ternary operator for error message being requested as a console log in case of errors lest a console log message denoting success
-                (err) => err ? console.error(err) : console.log('ReadME with title'))
+                (err) => err ? console.error(err) : console.log('Successfully Created:'))
         }
 // now appending more information by calling the about function
         about();
         function about() {
             fs.appendFile('README.md', 
+// Github username
+            (`## Github Username: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [${response.username}](https://github.com/${response.username})\n\n` +
 // few sentences about the HW
-            (`${response.about}\n\n` +
+            `## Description: \n${response.about}\n\n` +
 
 // User Story
-// `# User Story:\n ${response.userStory}\n\n` + --> If user story was provided as a part of input it would be formatted using this line instead of the next hardcoded version
-`# User Story: \nAS A developer\nI WANT a README generator\nSO THAT I can quickly create a professional README for a new project\n\n` +
+// `## User Story:\n ${response.userStory}\n\n` + --> If user story was provided as a part of input it would be formatted using this line instead of the next hardcoded version
+`## User Story: \nAS A developer\nI WANT a README generator\nSO THAT I can quickly create a professional README for a new project\n\n` +
 
 // Acceptance Criteria
-// `# Acceptance Criteria:\n ${response.acceptanceCriteria}\n\n` + --> If acceptance criteria was provided as a part of input it would be formatted using this line instead of the next hardcoded version
-`# Acceptance Criteria:\n
+// `## Acceptance Criteria:\n ${response.acceptanceCriteria}\n\n` + --> If acceptance criteria was provided as a part of input it would be formatted using this line instead of the next hardcoded version
+`## Acceptance Criteria:\n
 GIVEN a command-line application that accepts user input\n
 ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions\n
 ✓ WHEN I enter my project title THEN this is displayed as the title of the README\n
@@ -70,9 +78,9 @@ GIVEN a command-line application that accepts user input\n
 ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README\n\n` +
 
 // DNB's Solutions with links to repo and github page
-        `# DNB's SOLUTION:\n` +
-         `#### UNC Boot Camp Submission: \n` +
+        `## DNB's SOLUTION:\n` +
+         `##### UNC Boot Camp Submission: \n` +
             `🗂️ [Github Repository](${response.repository}) | 📄 [Github Page](${response.webpage})\n\n`), 
-            (err) => err ? console.error(err) : console.log('and appended content was successfully created.'))
+            (err) => err ? console.error(err) : console.log('A README.md file with user supplied content!'))
         }
     })

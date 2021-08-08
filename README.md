@@ -1,13 +1,16 @@
-# 09 Node.js Homework
+#  09 Node.js Homework: Professional ReadMe Generator
 
-In this homework, our task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
+## Github Username: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [DionneNoellaBarretto](https://github.com/DionneNoellaBarretto)
 
-# User Story: 
+## Description: 
+In this homework, our task is to create a command-line application that dynamically generates a professional README.md file from a user’s input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
+
+## User Story: 
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 
-# Acceptance Criteria:
+## Acceptance Criteria:
 
 GIVEN a command-line application that accepts user input
 
@@ -25,7 +28,7 @@ GIVEN a command-line application that accepts user input
 
 ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README
 
-# DNB's SOLUTION:
-#### UNC Boot Camp Submission: 
+## DNB's SOLUTION:
+##### UNC Boot Camp Submission: 
 🗂️ [Github Repository](https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://dionnenoellabarretto.github.io/09--Professional_ReadME_Node.Js/)
 
