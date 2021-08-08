@@ -24,12 +24,12 @@ inquirer.prompt([{
             name: 'contributors'
         },
         // checking if user created test scripts or not
-        // {
-        //     type: "list",
-        //     message: "Testing Scripts Added?",
-        //     choices: ["Yes", "No"], 
-        //     name: "testing",
-        // },
+        {
+            type: "list",
+            message: "Testing Scripts Added?",
+            choices: ["Yes", "No"], 
+            name: "testing",
+        },
         {
             type: "list",
             message: "Using the up/down arrow keys, select an appropriate license badge by clicking enter:",
@@ -88,6 +88,7 @@ inquirer.prompt([{
                     `👉 [Instructions](https://github.com/${response.username}/${response.repoName}#installation-instructions)\n\n` +
                     `👉 [Contributors](https://github.com/${response.username}/${response.repoName}#contributors)\n\n` +
                     `👉 [DNB Solution](https://github.com/${response.username}/${response.repoName}#dnbs-solution)\n\n` +
+                    `👉 [Testing Scripts](https://github.com/${response.username}/${response.repoName}#testing)\n\n` +
                     `👉 [User Story (Usage)](https://github.com/${response.username}/${response.repoName}#user-story-usage)\n\n` +
                     `👉 [Acceptance Criteria](https://github.com/${response.username}/${response.repoName}#acceptance-criteria)\n\n`),
                 (err) => err ? console.error(err) : console.log(''))
@@ -112,6 +113,7 @@ inquirer.prompt([{
                     `## DNB's SOLUTION:\n` +
                     `#### UNC Boot Camp Submission: \n` +
                     `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n` +
+                    `## Testing Scripts Added?: [${response.testing}](${response.testing})\n\n`
                     // User Story
                     `## User Story (Usage):\n ${response.userStory}
             \n [Video Link - Demonstration](https://drive.google.com/file/d/1i2ydpq66Lm8Iq8cuaFbdUhQKCRBB1cSr/view?usp=sharing)\n\n` +
