@@ -1,4 +1,4 @@
-#  09 Node.js Homework: Professional ReadMe Generator
+# 09 Node.js Homework: Professional ReadMe Generator
 
 ## Github Username: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [DionneNoellaBarretto](https://github.com/DionneNoellaBarretto)
 
@@ -30,5 +30,5 @@ GIVEN a command-line application that accepts user input
 
 ## DNB's SOLUTION:
 ##### UNC Boot Camp Submission: 
-🗂️ [Github Repository](https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://dionnenoellabarretto.github.io/09--Professional_ReadME_Node.Js/)
+🗂️ [Github Repository](https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://DionneNoellaBarretto.github.io/09--Professional_ReadME_Node.Js)
 

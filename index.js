@@ -27,14 +27,9 @@ inquirer.prompt([{
         // },  
         {
             type: 'input',
-            message: 'Github Repository URL?',
-            name: 'repository'
+            message: 'Github Repository Name?',
+            name: 'repoName'
         }, 
-        {
-            type: 'input',
-            message: 'Github Page URL?',
-            name: 'webpage'
-        },
         {
             type: 'input',
             message: 'Your Github username?',
@@ -77,10 +72,10 @@ GIVEN a command-line application that accepts user input\n
 ✓ WHEN I enter my email address THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions\n
 ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README\n\n` +
 
-// DNB's Solutions with links to repo and github page
+// DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
         `## DNB's SOLUTION:\n` +
          `##### UNC Boot Camp Submission: \n` +
-            `🗂️ [Github Repository](${response.repository}) | 📄 [Github Page](${response.webpage})\n\n`), 
-            (err) => err ? console.error(err) : console.log('A README.md file with user supplied content!'))
+            `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`), 
+            (err) => err ? console.error(err) : console.log('A README.md file with user supplied content!')) 
         }
     })
