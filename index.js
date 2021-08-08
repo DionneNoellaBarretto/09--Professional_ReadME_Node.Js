@@ -23,6 +23,13 @@ inquirer.prompt([{
             message: 'Contributors?',
             name: 'contributors'
         },
+        // checking if user created test scripts or not
+        // {
+        //     type: "list",
+        //     message: "Testing Scripts Added?",
+        //     choices: ["Yes", "No"], 
+        //     name: "testing",
+        // },
         {
             type: "list",
             message: "Using the up/down arrow keys, select an appropriate license badge by clicking enter:",
