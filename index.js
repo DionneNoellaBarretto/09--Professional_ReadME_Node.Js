@@ -106,20 +106,19 @@ inquirer.prompt([{
 // now appending more information by calling the about function
         about();
         function about() {
-            fs.appendFile('README.md',
+            fs.appendFile('README.md', (
 // license badges
-                (`## License Badges:\n This repository is released under the ${license}\n\n` +
+                `## License Badges:\n This repository is released under the ${license}\n\n` +
 // Github username & Email address
-                    `## Github Username: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [${response.username}](https://github.com/${response.username})\n[Email Me](${response.email})📧 \n\n` +
-// few sentences about /description
-                        `## Description: \n${response.about}\n\n` +
+            `### For any questions, reach me at: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [${response.username}](https://github.com/${response.username}) or  [Email Me 📧](${response.email})\n\n` +
+// few sentences like in an about / description
+            `## Description: \n${response.about}\n\n` +
 // User Story
 // `## User Story:\n ${response.userStory}\n\n` + --> If user story was provided as a part of input it would be formatted using this line instead of the next hardcoded version
             `## User Story: \n AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project\n\n` +
 // Acceptance Criteria
 // `## Acceptance Criteria:\n ${response.acceptanceCriteria}\n\n` + --> If acceptance criteria was provided as a part of input it would be formatted using this line instead of the next hardcoded version
-            `## Acceptance Criteria:\n
-### GIVEN a command-line application that accepts user input\n
+            `## Acceptance Criteria: \n#### GIVEN a command-line application that accepts user input \n
     ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions\n
     ✓ WHEN I enter my project title THEN this is displayed as the title of the README\n
     ✓ WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests\n
@@ -128,9 +127,9 @@ inquirer.prompt([{
     ✓ WHEN I enter my email address THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions\n
     ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README\n\n` +
 // DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
-                        `## DNB's SOLUTION:\n` +
-                        `#### UNC Boot Camp Submission: \n` +
-                        `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`),
-                            (err) => err ? console.error(err) : console.log(''))
-        }
-            })
+        `## DNB's SOLUTION:\n` +
+        `#### UNC Boot Camp Submission: \n` +
+        `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`),
+            (err) => err ? console.error(err) : console.log(''))
+}
+})

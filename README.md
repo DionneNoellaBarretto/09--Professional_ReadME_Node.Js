@@ -1,4 +1,4 @@
-# 09--Professional_ReadME_Node.Js 
+# 09--Professional_ReadME_Node.Js
 
 ## Table of Contents
 👉 [License Badges](## License Badges)
@@ -10,18 +10,16 @@
 ## License Badges:
  This repository is released under the 
 
-## Github Username: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [dionnenoellabarretto](https://github.com/dionnenoellabarretto)
-[Email Me](denverdionne@gmail.com)📧 
+### For any questions, reach me at: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [DIONNENOELLABARRETTO](https://github.com/DIONNENOELLABARRETTO) or  [Email Me 📧](		denverdionne@gmail.com)
 
 ## Description: 
-09--Professional_ReadME_Node.Js 
+09--Professional_ReadME_Node.JsADDDDDDDDDDDDDDDDDDDDDDD
 
 ## User Story: 
  AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project
 
-## Acceptance Criteria:
-
-### GIVEN a command-line application that accepts user input
+## Acceptance Criteria: 
+#### GIVEN a command-line application that accepts user input 
 
     ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
@@ -39,5 +37,5 @@
 
 ## DNB's SOLUTION:
 #### UNC Boot Camp Submission: 
-🗂️ [Github Repository](https://github.com/dionnenoellabarretto/09--Professional_ReadME_Node.Js ) | 📄 [Github Page](https://dionnenoellabarretto.github.io/09--Professional_ReadME_Node.Js )
+🗂️ [Github Repository](https://github.com/DIONNENOELLABARRETTO/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://DIONNENOELLABARRETTO.github.io/09--Professional_ReadME_Node.Js)
 
