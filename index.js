@@ -73,7 +73,7 @@ inquirer.prompt([{
             fs.appendFile('README.md',
 // dynamically generating a placeholder based on the users github username and repo section as outlined https://www.setcorrect.com/portfolio/work11/  
             (`## Table of Contents\n` +
-                    `👉 [GitHub Username & Email Address](https://github.com/${response.username}/${response.repoName}#for-any-questions-reach-me-via-my-username-at-${response.username}-or-email-me-at-denverdionnegmailcom)\n\n` +
+                    `👉 [Qns - Contact Me](https://github.com/${response.username}/${response.repoName}#for-any-questions-reach-me-via-my-username-at-${response.username}-or-email-me-at-denverdionnegmailcom)\n\n` +
                     `👉 [License](https://github.com/${response.username}/${response.repoName}#license-badges)\n\n` +
                     `👉 [Description](https://github.com/${response.username}/${response.repoName}#description)\n\n` +
                     `👉 [Instructions](https://github.com/${response.username}/${response.repoName}#installation-instructions)\n\n` +
@@ -96,17 +96,18 @@ inquirer.prompt([{
 // Installation Instructions: \n
             `## Installation Instructions: \n${response.instructions}\n\n` +
 //Contributor Section: \n
-`## Contributor(s): \n${response.contributors}\n\n` +
+            `## Contributor(s): \n${response.contributors}\n\n` +
 // DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
-        `## DNB's SOLUTION:\n` +
-        `#### UNC Boot Camp Submission: \n` +
-        `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`+
+            `## DNB's SOLUTION:\n` +
+            `#### UNC Boot Camp Submission: \n` +
+            `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`+
 // User Story
-`## User Story:\n ${response.userStory}\n\n` + 
+            `## User Story (Usage):\n ${response.userStory}\n
+            [09-Professional README_Node.js_Demonstration](https://drive.google.com/file/d/1i2ydpq66Lm8Iq8cuaFbdUhQKCRBB1cSr/view?usp=sharing)\n\n` + 
 //--> If user story/acceptable criteria was not provided as a part of input it would be formatted using this instead
 // `## User Story (Usage): \n AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project\n\n` +
 // Acceptance Criteria
-`## Acceptance Criteria:\n ${response.acceptanceCriteria}\n\n`), 
+            `## Acceptance Criteria:\n ${response.acceptanceCriteria} ![Gif Demo](./assets/images/09-Professional_README_Node.js.gif)\n\n`), 
 // alternative hardcoded option: 
 //         `## Acceptance Criteria: \n##### GIVEN a command-line application that accepts user input \n
 // ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions\n
