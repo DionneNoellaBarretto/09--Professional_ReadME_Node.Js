@@ -79,10 +79,10 @@ inquirer.prompt([{
                     `👉 [License](https://github.com/${response.username}/${response.repoName}#license)\n\n` +
                     `👉 [Description](https://github.com/${response.username}/${response.repoName}#description)\n\n` +
                     `👉 [Instructions](https://github.com/${response.username}/${response.repoName}#installation-instructions)\n\n` +
-                    `👉 [User Story (Usage)](https://github.com/${response.username}/${response.repoName}#user-story-usage)\n\n` +
-                    `👉 [Acceptance Criteria](https://github.com/${response.username}/${response.repoName}#acceptance-criteria)\n\n` +
                     `👉 [Contributors](https://github.com/${response.username}/${response.repoName}#contributors)\n\n` +
-                    `👉 [DNB Solution](https://github.com/${response.username}/${response.repoName}#dnbs-solution)\n\n`),
+                    `👉 [DNB Solution](https://github.com/${response.username}/${response.repoName}#dnbs-solution)\n\n` +
+                    `👉 [User Story (Usage)](https://github.com/${response.username}/${response.repoName}#user-story-usage)\n\n` +
+                    `👉 [Acceptance Criteria](https://github.com/${response.username}/${response.repoName}#acceptance-criteria)\n\n`),
                 (err) => err ? console.error(err) : console.log(''))
         }
         // now appending more information by calling the about function
@@ -91,13 +91,14 @@ inquirer.prompt([{
         function about() {
             fs.appendFile('README.md', (
                     // Github username & Email address
-                    `\n #### For any questions:\n Reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [${response.username}](https://github.com/${response.username}) or email me at: 📧 ${response.email}.\n\n` +
+                    `\n ### For any questions:\n Reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [${response.username}](https://github.com/${response.username}) or email me at: 📧 ${response.email}.\n\n` +
                     // license badges
                     `## License:\n This repository is released under the license of: [${response.license}](https://opensource.org/licenses/${response.license})\n\n` +
                     // few sentences like in an about / description
                     `## Description: \n${response.about}\n\n` +
                     // Installation Instructions: \n
-                    `## Installation Instructions: \n${response.instructions}\n\n` +
+                    `## Installation Instructions: \n${response.instructions}
+                    \n![Example](./assets/images/Example.png?raw=true "Example")\n\n` +
                     //Contributor Section: \n
                     `## Contributor(s): \n${response.contributors}\n\n` +
                     // DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
