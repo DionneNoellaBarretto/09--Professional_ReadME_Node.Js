@@ -75,8 +75,8 @@ inquirer.prompt([{
             fs.appendFile('README.md',
                 // dynamically generating a placeholder based on the users github username and repo section as outlined https://www.setcorrect.com/portfolio/work11/  
                 (`## Table of Contents\n` +
-                    `👉 [Qns -Contact Information](https://github.com/${response.username}/${response.repoName}#for-any-questions-reach-me-via-my-username-at-dionnenoellabarretto-or-email-me-at--denverdionnegmailcom)\n\n` +
-                    `👉 [License](https://github.com/${response.username}/${response.repoName}#license-badges)\n\n` +
+                    `👉 [Qns -Contact Information](https://github.com/${response.username}/${response.repoName}#for-any-questions)\n\n` +
+                    `👉 [License](https://github.com/${response.username}/${response.repoName}#license)\n\n` +
                     `👉 [Description](https://github.com/${response.username}/${response.repoName}#description)\n\n` +
                     `👉 [Instructions](https://github.com/${response.username}/${response.repoName}#installation-instructions)\n\n` +
                     `👉 [User Story (Usage)](https://github.com/${response.username}/${response.repoName}#user-story-usage)\n\n` +
@@ -91,7 +91,7 @@ inquirer.prompt([{
         function about() {
             fs.appendFile('README.md', (
                     // Github username & Email address
-                    `\n #### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [${response.username}](https://github.com/${response.username}) or email me at: 📧${response.email}.\n\n` +
+                    `\n #### For any questions:\n Reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [${response.username}](https://github.com/${response.username}) or email me at: 📧 ${response.email}.\n\n` +
                     // license badges
                     `## License:\n This repository is released under the license of: [${response.license}](https://opensource.org/licenses/${response.license})\n\n` +
                     // few sentences like in an about / description
@@ -110,7 +110,8 @@ inquirer.prompt([{
                     //--> If user story/acceptable criteria was not provided as a part of input it would be formatted using this instead
                     // `## User Story (Usage): \n AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project\n\n` +
                     // Acceptance Criteria
-                    `## Acceptance Criteria:\n ${response.acceptanceCriteria}\n ![Gif Demo](./assets/images/09-Professional_README_Node.js.gif)\n\n`),
+                    `## Acceptance Criteria:\n ${response.acceptanceCriteria} 
+                    \n![Gif Demo](./assets/images/09-Professional_README_Node.js.gif)\n\n`),
                 // alternative hardcoded option: 
                 //         `## Acceptance Criteria: \n##### GIVEN a command-line application that accepts user input \n
                 // ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions\n
