@@ -1,25 +1,30 @@
-# 09--Professional_ReadME_Node.Js
+# dynamic readme
 
 ## Table of Contents
-👉 [License Badges](## License Badges)
-👉 [GitHub Username & Email Address](## Github Username)
-👉 [Description](## Description)
-👉 [User Story](## User Story)
-👉 [Acceptance Criteria](## Acceptance Criteria)
-👉 [DNB Solution](## DNB's SOLUTION)
-## License Badges:
- This repository is released under the 
+👉 [GitHub Username & Email Address](#username)
+👉 [License Badges](#license)
+👉 [Description](#about)
+👉 [User Story](#userStory)
+👉 [Acceptance Criteria](#acceptanceCriteria)
+👉 [DNB Solution](#repoName)
 
-### For any questions, reach me at: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [DIONNENOELLABARRETTO](https://github.com/DIONNENOELLABARRETTO) or  [Email Me 📧](		denverdionne@gmail.com)
+ ##### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username: [dionnenoellabarretto](https://github.com/dionnenoellabarretto) or email me at: 📧(denverdionne@gmail.com)
+
+## License Badges:
+ This repository is released under the license(s) of: Apache
 
 ## Description: 
-09--Professional_ReadME_Node.JsADDDDDDDDDDDDDDDDDDDDDDD
+dynamic readme
+
+## DNB's SOLUTION:
+#### UNC Boot Camp Submission: 
+🗂️ [Github Repository](https://github.com/dionnenoellabarretto/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://dionnenoellabarretto.github.io/09--Professional_ReadME_Node.Js)
 
 ## User Story: 
  AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project
 
 ## Acceptance Criteria: 
-#### GIVEN a command-line application that accepts user input 
+##### GIVEN a command-line application that accepts user input 
 
     ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
@@ -34,8 +39,4 @@
     ✓ WHEN I enter my email address THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
     ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README
-
-## DNB's SOLUTION:
-#### UNC Boot Camp Submission: 
-🗂️ [Github Repository](https://github.com/DIONNENOELLABARRETTO/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://DIONNENOELLABARRETTO.github.io/09--Professional_ReadME_Node.Js)
 

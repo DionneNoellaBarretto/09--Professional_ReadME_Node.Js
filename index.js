@@ -59,9 +59,10 @@ inquirer.prompt([{
 
 // license badge logic using switch cases: 
         let license = "";
+        const selectedLicense = response.license;
         licenseBadge();
         function licenseBadge() {
-            switch (response.license) {
+            switch (selectedLicense) {
                 case "Apache":
                     licenseLink = `[Apache License](https://www.apache.org/licenses/LICENSE-2.0)`;
                     fs.appendFile('README.md', (
@@ -94,12 +95,12 @@ inquirer.prompt([{
         function toc() {
             fs.appendFile('README.md',
             (`## Table of Contents\n` +
-                    `👉 [License Badges](## License Badges)\n` +
-                    `👉 [GitHub Username & Email Address](## Github Username)\n` +
-                    `👉 [Description](## Description)\n` +
-                    `👉 [User Story](## User Story)\n` +
-                    `👉 [Acceptance Criteria](## Acceptance Criteria)\n` +
-                    `👉 [DNB Solution](## DNB's SOLUTION)\n`),
+                    `👉 [GitHub Username & Email Address](#username)\n` +
+                    `👉 [License Badges](#license)\n` +
+                    `👉 [Description](#about)\n` +
+                    `👉 [User Story](#userStory)\n` +
+                    `👉 [Acceptance Criteria](#acceptanceCriteria)\n` +
+                    `👉 [DNB Solution](#repoName)\n`),
                 (err) => err ? console.error(err) : console.log(''))
             }
 
@@ -107,29 +108,29 @@ inquirer.prompt([{
         about();
         function about() {
             fs.appendFile('README.md', (
-// license badges
-                `## License Badges:\n This repository is released under the ${license}\n\n` +
 // Github username & Email address
-            `### For any questions, reach me at: ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo") [${response.username}](https://github.com/${response.username}) or  [Email Me 📧](${response.email})\n\n` +
+            `\n ##### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [${response.username}](https://github.com/${response.username}) or email me at: 📧${response.email}.\n\n` +
+// license badges
+            `## License Badges:\n This repository is released under the license(s) of: ${response.license}\n\n` +
 // few sentences like in an about / description
             `## Description: \n${response.about}\n\n` +
+// DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
+        `## DNB's SOLUTION:\n` +
+        `#### UNC Boot Camp Submission: \n` +
+        `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`+
 // User Story
 // `## User Story:\n ${response.userStory}\n\n` + --> If user story was provided as a part of input it would be formatted using this line instead of the next hardcoded version
             `## User Story: \n AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project\n\n` +
 // Acceptance Criteria
 // `## Acceptance Criteria:\n ${response.acceptanceCriteria}\n\n` + --> If acceptance criteria was provided as a part of input it would be formatted using this line instead of the next hardcoded version
-            `## Acceptance Criteria: \n#### GIVEN a command-line application that accepts user input \n
+            `## Acceptance Criteria: \n##### GIVEN a command-line application that accepts user input \n
     ✓ WHEN I am prompted for information about my application repository THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions\n
     ✓ WHEN I enter my project title THEN this is displayed as the title of the README\n
     ✓ WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests\n
     ✓ WHEN I choose a license for my application from a list of options THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under\n
     ✓ WHEN I enter my GitHub username THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile\n
     ✓ WHEN I enter my email address THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions\n
-    ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README\n\n` +
-// DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
-        `## DNB's SOLUTION:\n` +
-        `#### UNC Boot Camp Submission: \n` +
-        `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`),
+    ✓ WHEN I click on the links in the Table of Contents THEN I am taken to the corresponding section of the README\n\n`),
             (err) => err ? console.error(err) : console.log(''))
 }
 })
