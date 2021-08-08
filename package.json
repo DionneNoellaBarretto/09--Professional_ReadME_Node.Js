@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DionneNoellaBarretto/09--Professional_ReadME_Node.Js#readme",
   "dependencies": {
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.1.2",
+    "remark-toc": "^8.0.0"
   }
 }
