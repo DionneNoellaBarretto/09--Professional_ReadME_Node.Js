@@ -1,26 +1,34 @@
-# dynamic readme
+# TEST
 
 ## Table of Contents
 👉 [GitHub Username & Email Address](#username)
 👉 [License Badges](#license)
 👉 [Description](#about)
-👉 [User Story](#userStory)
+👉 [Instructions](#instructions)
+👉 [User Story (Usage)](#userStory)
 👉 [Acceptance Criteria](#acceptanceCriteria)
+👉 [Contributors](#contributors)
 👉 [DNB Solution](#repoName)
 
- ##### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username: [dionnenoellabarretto](https://github.com/dionnenoellabarretto) or email me at: 📧(denverdionne@gmail.com)
+ ##### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [dionnenoellabarretto](https://github.com/dionnenoellabarretto) or email me at: 📧denverdionne@gmail.com.
 
 ## License Badges:
- This repository is released under the license(s) of: Apache
+ This repository is released under the license of: [gpl-3.0](https://opensource.org/licenses/gpl-3.0)
 
 ## Description: 
-dynamic readme
+TEST
+
+## Installation Instructions: 
+To generate your own README, first run npm install in order to install the  npm package dependencies as specified in the package.json. Then run the application using node index.js
+
+## Contributor(s): 
+N/A
 
 ## DNB's SOLUTION:
 #### UNC Boot Camp Submission: 
 🗂️ [Github Repository](https://github.com/dionnenoellabarretto/09--Professional_ReadME_Node.Js) | 📄 [Github Page](https://dionnenoellabarretto.github.io/09--Professional_ReadME_Node.Js)
 
-## User Story: 
+## User Story (Usage): 
  AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project
 
 ## Acceptance Criteria: 

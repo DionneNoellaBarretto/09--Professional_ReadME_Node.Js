@@ -10,13 +10,23 @@ inquirer.prompt([{
         },
         {
             type: 'input',
-            message: 'What is this homework about?',
+            message: 'What is this homework about? Add a quick description: ',
             name: 'about'
         },
         {
-            type: "checkbox",
-            message: "Select 1 or more appropriate license badges:",
-            choices: ["Apache", "MIT", "BSD 3-clause", "GPLv3"], // list of license options --> https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository#choosing-the-right-license
+            type: 'input',
+            message: 'Installation Instructions:',
+            name: 'instructions'
+        },
+        {
+            type: 'input',
+            message: 'Contributors?',
+            name: 'contributors'
+        },
+        {
+            type: "list",
+            message: "Using the up/down arrow keys, select an appropriate license badge by clicking enter:",
+            choices: ["Apache-2.0", "MIT", "BSD-3-Clause", "gpl-3.0"], // list of license options --> https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository#choosing-the-right-license
             name: "license",
         },
         {
@@ -57,39 +67,6 @@ inquirer.prompt([{
                 (err) => err ? console.error(err) : console.log('A README.md file with user supplied content and a table of contents section was successfully created!'))
         }
 
-// license badge logic using switch cases: 
-        let license = "";
-        const selectedLicense = response.license;
-        licenseBadge();
-        function licenseBadge() {
-            switch (selectedLicense) {
-                case "Apache":
-                    licenseLink = `[Apache License](https://www.apache.org/licenses/LICENSE-2.0)`;
-                    fs.appendFile('README.md', (
-//Creating badges using this site: https://img.shields.io/ 
-                        `[![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)\n`
-                    ), (err) => err ? console.error(err) : console.log('Apache Badge added.'))
-                    break;
-                case "MIT":
-                    licenseLink = `[MIT License](https://opensource.org/licenses/MIT)`;
-                    fs.appendFile('README.md',
-                        (`[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)\n`),
-                        (err) => err ? console.error(err) : console.log('MIT Badge added.'))
-                    break;
-                case 'BSD 3-clause':
-                    licenseLink = `[BSD 3-clause License](https://opensource.org/licenses/BSD-3-Clause)`;
-                    fs.appendFile('README.md', (
-                        `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)\n`
-                    ), (err) => err ? console.error(err) : console.log(' BSD 3-clause Badge added.'))
-                    break;
-                case 'GPLv3':
-                    licenseLink = `[GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)`;
-                    fs.appendFile('README.md', (
-                        `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)\n`
-                    ), (err) => err ? console.error(err) : console.log('GPLv3 Badge added.'))
-                    break;
-            }
-        }
 //table of contents
         toc();
         function toc() {
@@ -98,12 +75,13 @@ inquirer.prompt([{
                     `👉 [GitHub Username & Email Address](#username)\n` +
                     `👉 [License Badges](#license)\n` +
                     `👉 [Description](#about)\n` +
-                    `👉 [User Story](#userStory)\n` +
+                    `👉 [Instructions](#instructions)\n` +
+                    `👉 [User Story (Usage)](#userStory)\n` +
                     `👉 [Acceptance Criteria](#acceptanceCriteria)\n` +
+                    `👉 [Contributors](#contributors)\n` +
                     `👉 [DNB Solution](#repoName)\n`),
                 (err) => err ? console.error(err) : console.log(''))
             }
-
 // now appending more information by calling the about function
         about();
         function about() {
@@ -111,16 +89,22 @@ inquirer.prompt([{
 // Github username & Email address
             `\n ##### For any questions, reach me via my ![Github Logo](./assets/images/octocat.png?raw=true "Github Logo")username at: [${response.username}](https://github.com/${response.username}) or email me at: 📧${response.email}.\n\n` +
 // license badges
-            `## License Badges:\n This repository is released under the license(s) of: ${response.license}\n\n` +
+            `## License Badges:\n This repository is released under the license of: [${response.license}](https://opensource.org/licenses/${response.license})\n\n` +
 // few sentences like in an about / description
             `## Description: \n${response.about}\n\n` +
+// Installation Instructions: \n
+            `## Installation Instructions: \n${response.instructions}\n\n` +
+//Contributor Section: \n
+`## Contributor(s): \n${response.contributors}\n\n` +
 // DNB's Solutions with links to repo and github page that are dynamically generated using the repoName and username input values
         `## DNB's SOLUTION:\n` +
         `#### UNC Boot Camp Submission: \n` +
         `🗂️ [Github Repository](https://github.com/${response.username}/${response.repoName}) | 📄 [Github Page](https://${response.username}.github.io/${response.repoName})\n\n`+
 // User Story
 // `## User Story:\n ${response.userStory}\n\n` + --> If user story was provided as a part of input it would be formatted using this line instead of the next hardcoded version
-            `## User Story: \n AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project\n\n` +
+
+// here's 2 snippets that are preformatted as a part of the readme (for experimentation sake)
+            `## User Story (Usage): \n AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project\n\n` +
 // Acceptance Criteria
 // `## Acceptance Criteria:\n ${response.acceptanceCriteria}\n\n` + --> If acceptance criteria was provided as a part of input it would be formatted using this line instead of the next hardcoded version
             `## Acceptance Criteria: \n##### GIVEN a command-line application that accepts user input \n
